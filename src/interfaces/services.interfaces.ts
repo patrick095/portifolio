@@ -1,4 +1,4 @@
 export interface IGitLanguagesResponse {
-    codingLanguages: { [key: string]: string };
+    codingLanguages: Record<string, string>;
     languagesList: Array<string>;
 }

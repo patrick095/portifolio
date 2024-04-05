@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import CloudDownloadIcon from "@material-ui/icons/CloudDownload";
 import Image from "next/image";
 import styles from "./LeftBar.module.scss";
 import profileImg from "../../../public/perfil.jpeg";
 import { getGitLanuages } from "../../services/api";
 import Language from "../language";
+import { CloudDownload } from "@mui/icons-material";
 
 export default function LeftBar() {
     const [coding, setCoding] = useState<{ [key: string]: any }>({});
@@ -13,7 +13,17 @@ export default function LeftBar() {
 
     useEffect(() => {
         getGitLanuages().then((response) => {
-            setLanguages(response.languagesList);
+            setLanguages(
+                response.languagesList.sort(
+                    (p, n) =>
+                        parseFloat(
+                            response.codingLanguages[n].replace(/[^0-9.]/gi, "")
+                        ) -
+                        parseFloat(
+                            response.codingLanguages[p].replace(/[^0-9.]/gi, "")
+                        )
+                )
+            );
             setCoding(response.codingLanguages);
         });
     }, []);
@@ -56,9 +66,12 @@ export default function LeftBar() {
                     Estou disponível para contratação!
                 </span>
                 <div className={styles.name}>
-                    <h1>{"<Patrick Chaves />"}</h1>
-                    <h2>{"<Javascript Developer />"}</h2>
-                    <h2>{"<Fullstack />"}</h2>
+                    <h1>{"Patrick Chaves"}</h1>
+                    <h2>
+                        {
+                            "Desenvolvedor FullStack | Angular | React | Nextjs | Node | Java | NestJs"
+                        }
+                    </h2>
                 </div>
             </div>
             <div className={styles.coding}>
@@ -88,12 +101,12 @@ export default function LeftBar() {
             <div className={styles.downloadCV}>
                 <div className={styles.separator}></div>
                 <a
-                    href="https://drive.google.com/file/d/1k93HCxIGKdQiAmHqP5ETTEi_8YoA-UJX/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1D37jgYOwEFskNosjXvqtGVCcZS894N-W/view?usp=share_link"
                     target="_blank"
                     rel="noreferrer noopner"
                 >
                     <h2>
-                        Download CV <CloudDownloadIcon />
+                        Download CV <CloudDownload />
                     </h2>
                 </a>
             </div>

@@ -15,7 +15,9 @@ export default async function calcAllReposLanguages(api: AxiosInstance, repos: A
                     .then(repoLanguages =>{
                         index++;
                         for (const language in repoLanguages) {
-                            languagesUser[language] = (languagesUser[language] || 0 ) + repoLanguages[language];
+                            if (repoLanguages[language] <= 1000000) {
+                                languagesUser[language] = (languagesUser[language] || 0 ) + repoLanguages[language];
+                            }
                         };
                         if (index === repos.length) {
                             var total = 0;

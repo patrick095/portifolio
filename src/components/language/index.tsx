@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import styles from './Coding.module.scss'
 
 export default function Language({language, percent}: {language: string, percent: string}) {
-    let percentFinal = percent ? parseFloat(percent.replace(/[^0-9.]/gi, '')) : '0'
+    let percentFinal = percent ? parseFloat(percent.replace(/[^0-9.]/gi, '')) : 0
 
     useEffect(()=>{
         let count = 0
@@ -21,9 +21,6 @@ export default function Language({language, percent}: {language: string, percent
         }, 10)
     },[language, percentFinal])
 
-    if (percentFinal < 1) {
-        return <></>
-    }
     return (
         <div className={styles.coding}>
             <div className={styles.title}> 

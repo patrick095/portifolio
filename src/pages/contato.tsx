@@ -12,9 +12,9 @@ export default function Portifolio(){
                 <div className={styles.frameData}>
                     <span>Email: 
                         <a 
-                        href="mailto:patrick095@gmail.com" 
+                        href="mailto:contato@patrickchaves.com.br" 
                         rel="noopener noreferrer"
-                        target="_blank"> patrick095@gmail.com </a>
+                        target="_blank"> contato@patrickchaves.com.br </a>
                     </span>
                     <span>Telegram:
                         <a 

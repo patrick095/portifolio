@@ -57,7 +57,7 @@
     width: 30px;
     border-radius: 50%;
     position: absolute;
-    animation: pulse 0.8s infinite ease-out;
+    animation: pulse 1s infinite reverse ease-in-out;
   }
   .notificationMsg {
     color: white;
@@ -157,8 +157,8 @@
     from {
       width: 30px;
       height: 30px;
-      opacity: 1;
       transform: translate(0px, 0px);
+      opacity: 1;
     }
     to {
       width: 40px;

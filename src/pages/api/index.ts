@@ -3,7 +3,7 @@ import calcAllReposLanguages from './controllers/calcAllReposLanguages';
 import { NextApiRequest, NextApiResponse } from 'next';
 require('dotenv').config();
 
-module.exports = async (req: NextApiRequest, res: NextApiResponse) => {
+export default async function Api(req: NextApiRequest, res: NextApiResponse) {
     const user= req.query.user as string;
     const api = createInstance(process.env.GIT_TOKEN);
     const repos = await getAuthRepos(api);

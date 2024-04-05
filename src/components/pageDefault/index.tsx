@@ -75,16 +75,16 @@ export default function PageDefault({
                         className={styles.links}
                     >
                         <Link href="/">
-                            <a>Inicio</a>
+                            Inicio
                         </Link>
                         <Link href="/portifolio">
-                            <a>Portifolio</a>
+                            Portifolio
                         </Link>
                         <Link href="/cv">
-                            <a>Curriculo</a>
+                            Curriculo
                         </Link>
                         <Link href="/contato">
-                            <a>Contato</a>
+                            Contato
                         </Link>
                     </div>
                     <div className={styles.actualPage}>

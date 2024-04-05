@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { createGitInstance } from "../services/api";
 import styles from "../styles/Portifolio.module.scss";
-import LinkIcon from "@material-ui/icons/Link";
 import Head from "next/head";
 import { AxiosResponse } from "axios";
+import { LinkOutlined } from "@mui/icons-material";
 
 export default function Portifolio() {
     const [repos, setRepos] = useState<Array<any>>([]);
@@ -74,7 +74,7 @@ export default function Portifolio() {
                         rel="noopener noreferrer"
                         target="_blank"
                     >
-                        Link <LinkIcon />
+                        Link <LinkOutlined />
                     </a>
                     <h4>Descrição:</h4>
                     <span>
@@ -111,7 +111,7 @@ export default function Portifolio() {
                         rel="noopener noreferrer"
                         target="_blank"
                     >
-                        Link <LinkIcon />
+                        Link <LinkOutlined />
                     </a>
                     <h4>Descrição:</h4>
                     <span>

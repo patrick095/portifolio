@@ -20,7 +20,7 @@ export default function CV(){
             <div className={styles.frame}>
                 <h1>Formação Acadêmica</h1>
                 <Formation 
-                date="2021.1 - Atual"
+                date="2021.1 - 2023.2"
                 title="Sistemas para Internet"
                 description="Tecnólogo em sistemas para internet"
                 learning="true"
@@ -45,7 +45,7 @@ export default function CV(){
                     </div>
                     <h2>Inglês</h2>
                     <div className={styles.progressBarBackground}>
-                    <div className={styles.progressBar} style={{width: '40%'}}></div>
+                    <div className={styles.progressBar} style={{width: '60%'}}></div>
                     </div>
                 </div>
             </div>
