@@ -7,6 +7,9 @@ export default function Home(){
     <div className={styles.home}>
     <Head>
         <title>Patrick Chaves</title>
+        <meta name='description' content='Patrick Douglas Pinho Chaves desenvolvedor Fullstack' />
+        <meta name='keywords' content='patrick, Patrick, chaves, Chaves, Patrick Chaves, patrick chaves, dev, desenvolvedor, fullstack, backend, frontend'/>
+        <meta name='author' content='Patrick Chaves'/>
     </Head>
         <div className={styles.banner}>
             <div className={styles.bannerBackground}>
